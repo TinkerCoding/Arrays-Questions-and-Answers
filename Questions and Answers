@@ -1,0 +1,76 @@
+// 1. Implement submitting a grade (it should add the grade to the grades array)
+
+/**
+ * @param {array} grades
+ * @param {number} grade
+ */
+ 
+ export function addGrade(grades, grade) {
+        grades.push(grade)
+        return grades
+}
+
+// 2. Show the number of tests taken.
+
+/**
+* @param {array} grades
+*/
+
+export function getNumberOfGrades(grades) {
+        return grades.length
+}
+
+// 3. Show the first submitted grade (first submitted, not the highest).
+
+/**
+ * @param {array} grades
+ */
+ 
+ export function getFirstGrade(grades) {
+      return grades[0]
+ }
+ 
+ // 4. Show the last submitted grade (last submitted, not the lowest).
+ 
+ /**
+  * @param {array} grades
+  */
+  
+  export function getLastGrade(grades) {
+         return grades[grades.length - 1]
+  }
+  
+  // 5. Show the sum of all the grades.
+  
+ /**
+  * @param {array} grades
+  */
+  
+ export function getSumOfGrades(grades) {
+        return grades.reduce(function(total, current) {
+           return total + current
+           }, 0)
+          }
+       
+// 6. Show the average grade
+
+/**
+ * @param {array} grades
+ */
+ 
+ export function getAverageGrade(grades) {
+       return getSumOfGrades(grades) / grades.length
+}
+
+// 7. Show the grades raised by 2 (every grade increased by 2 points)
+
+/**
+ * @param {array} grades
+ */
+ 
+ export function getRaisedGrades(grades) {
+     return grades.map(function(grade) {
+        return grade + 2
+        })
+       }
+        
